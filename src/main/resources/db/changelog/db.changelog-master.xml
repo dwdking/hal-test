@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="dking">
+        <createTable tableName="some">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="message" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="second_message" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="dking">
+        <insert tableName="some">
+            <column name="message" value="hello"/>
+            <column name="second_message" value="two"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3" author="dking">
+        <insert tableName="some">
+            <column name="message" value="world"/>
+            <column name="second_message" value="two"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="4" author="dking">
+        <insert tableName="some">
+            <column name="message" value="Hello, world!"/>
+            <column name="second_message" value="two"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

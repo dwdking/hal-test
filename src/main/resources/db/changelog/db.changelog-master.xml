@@ -40,5 +40,11 @@
             <column name="second_message" value="two"/>
         </insert>
     </changeSet>
+    <changeSet id="5" author="dking">
+        <insert tableName="some">
+            <column name="message" value="На берегу пустынных волн"/>
+            <column name="second_message" value="На берегу пустынных волн"/>
+        </insert>
+    </changeSet>
 
 </databaseChangeLog>
